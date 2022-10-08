@@ -10,12 +10,14 @@ nav {
 }
 button {
   color: #ffffff;
-  background-color: #252323;
+  background-color: rgb(37, 35, 35, 0.2);
+
   padding: 10px;
   display: block;
   border-radius: 5px;
   &:hover {
-    background-color: #555555;
+    background-color: rgb(150, 150, 150, 0.2);
+    border-color: rgb(255, 255, 255, 0.2);
     transition: 0.2s;
   }
 }
