@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("./assets/fonts/fonts.scss");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GilroyRegular;
+}
+body {
+  background-color: #010101;
+}
+.wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  color: #ffffff;
+}

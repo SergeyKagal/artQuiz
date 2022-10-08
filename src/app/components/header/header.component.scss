@@ -1,0 +1,21 @@
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+button {
+  color: #ffffff;
+  background-color: #252323;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+  &:hover {
+    background-color: #555555;
+    transition: 0.2s;
+  }
+}
