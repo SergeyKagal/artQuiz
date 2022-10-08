@@ -1,0 +1,15 @@
+@import url("../../../assets/fonts/fonts.scss");
+footer {
+  position: absolute;
+  bottom: 0;
+  h4 {
+    font-family: GilroyThin;
+  }
+}
+a {
+  text-decoration: none;
+  color: #777777;
+  &:hover {
+    color: #bbbbbb;
+  }
+}
