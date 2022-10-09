@@ -1,1 +1,46 @@
-<p>settings works!</p>
+<div class="settings-wrapper">
+  <h3>artQuiz settings</h3>
+  <form (submit)="onSubmit($event)">
+    <input
+      type="checkbox"
+      name="soundOn"
+      id="soundOn"
+      [(ngModel)]="settings.soundOn"
+    />
+    <label for="soundOn" class="label-sound">Sound</label>
+    <input
+      type="checkbox"
+      name="timerOn"
+      id="timerOn"
+      [(ngModel)]="settings.timerOn"
+    />
+    <label for="timerOn" class="label-timer">Timer</label>
+    <div class="volume">
+      <input
+        type="range"
+        name="volume"
+        id="volume"
+        min="0"
+        max="100"
+        [(ngModel)]="settings.volume"
+      />
+      <label for="volume">Volume</label>
+    </div>
+    <div class="time">
+      <input
+        type="range"
+        name="time"
+        id="time"
+        min="0"
+        max="60"
+        [(ngModel)]="settings.time"
+      />
+      <label for="time">Time</label>
+    </div>
+
+    <div class="button-wrapper">
+      <button (click)="onDefault($event)">default</button>
+      <button type="submit">save</button>
+    </div>
+  </form>
+</div>
