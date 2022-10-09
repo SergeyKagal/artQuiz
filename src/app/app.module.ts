@@ -8,10 +8,11 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { PaintingsComponent } from './components/paintings/paintings.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  // { path: 'paintings', component: AboutComponent },
+  { path: 'paintings', component: PaintingsComponent },
   // { path: 'artists', component: FormComponent },
   // { path: '**', component: NotFoundComponent },
   { path: 'settings', component: SettingsComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
     SettingsComponent,
     HeaderComponent,
     FooterComponent,
+    PaintingsComponent,
   ],
   imports: [
     BrowserModule,
