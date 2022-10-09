@@ -7,13 +7,14 @@ import { MainComponent } from './components/main/main.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   // { path: 'paintings', component: AboutComponent },
   // { path: 'artists', component: FormComponent },
   // { path: '**', component: NotFoundComponent },
-  {path:'settings',component:SettingsComponent}
+  { path: 'settings', component: SettingsComponent },
 ];
 
 @NgModule({
@@ -22,14 +23,15 @@ const routes: Routes = [
     MainComponent,
     SettingsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,RouterModule.forRoot(routes),
-
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
