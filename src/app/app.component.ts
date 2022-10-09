@@ -15,7 +15,8 @@ export class AppComponent implements OnInit {
       .pipe(filter((e: Event): e is RouterEvent => e instanceof RouterEvent))
       .subscribe((e: RouterEvent) => {
         // Do something
-        this.isMainScreen = e.url === '/' ? true : false;
+        this.isMainScreen =
+          e.url === '/' || e.url === '/settings' ? true : false;
       });
   }
 

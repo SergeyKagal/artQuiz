@@ -1,5 +1,9 @@
 <div class="settings-wrapper">
-  <h3>artQuiz settings</h3>
+  <header>
+    <h3>artQuiz settings</h3>
+    <div class="close-button" routerLink="/"></div>
+  </header>
+
   <form (submit)="onSubmit($event)">
     <input
       type="checkbox"
@@ -24,7 +28,7 @@
         max="100"
         [(ngModel)]="settings.volume"
       />
-      <label for="volume">Volume</label>
+      <label for="volume">Volume {{ settings.volume }}</label>
     </div>
     <div class="time">
       <input
@@ -35,7 +39,7 @@
         max="60"
         [(ngModel)]="settings.time"
       />
-      <label for="time">Time</label>
+      <label for="time">Time {{ settings.time }}</label>
     </div>
 
     <div class="button-wrapper">
