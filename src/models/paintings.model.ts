@@ -5,10 +5,10 @@ export interface IPainting {
   imageNum: string;
 }
 
-interface IAnswer {
+export interface IAnswer {
   id: number;
   isWrong: boolean;
-  painting: IPainting;
+  paintingId: number;
 }
 
 export interface IPaintingQuestion {

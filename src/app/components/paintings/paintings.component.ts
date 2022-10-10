@@ -4,6 +4,7 @@ import {
   IPaintingCategory,
   IPaintingQuestion,
 } from 'src/models/paintings.model';
+import { anwersMake } from 'src/utils/answersMake';
 import * as paintings from '../../../data/images_ru.json';
 
 @Component({
@@ -23,6 +24,7 @@ export class PaintingsComponent implements OnInit {
     this.categoriesMake();
     this.categories.forEach((e) => console.log(e));
   }
+
   categoriesMake() {
     for (let i = 0; i < this.categoriesAmount; i++) {
       this.categories.push({
@@ -35,13 +37,12 @@ export class PaintingsComponent implements OnInit {
   questionMake(categoryNumber: number) {
     const res: IPaintingQuestion[] = [];
     for (let i = 0; i < this.questionsAmountInCategory; i++) {
+      const questionId =
+        Number(categoryNumber) * this.questionsAmountInCategory + i;
       res.push({
-        id: `${Number(categoryNumber) * this.questionsAmountInCategory + i}`,
-        painting:
-          this.paintings[
-            Number(categoryNumber) * this.questionsAmountInCategory + i
-          ],
-        answers: [],
+        id: `${questionId}`,
+        painting: this.paintings[questionId],
+        answers: anwersMake(questionId),
       });
     }
     return res;
